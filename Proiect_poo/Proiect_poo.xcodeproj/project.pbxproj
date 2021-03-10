@@ -25,6 +25,9 @@
 /* Begin PBXFileReference section */
 		DD0C33CD25F915A900D65181 /* Proiect_poo */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Proiect_poo; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD0C33D025F915A900D65181 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		DDE5E39D25F9295A003A1205 /* Furnizor_Magazin_Produs.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Furnizor_Magazin_Produs.h; sourceTree = "<group>"; };
+		DDE5E39E25F92A12003A1205 /* Cumparator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Cumparator.h; sourceTree = "<group>"; };
+		DDE5E39F25F92ABE003A1205 /* Comanda.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Comanda.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +61,9 @@
 			isa = PBXGroup;
 			children = (
 				DD0C33D025F915A900D65181 /* main.cpp */,
+				DDE5E39D25F9295A003A1205 /* Furnizor_Magazin_Produs.h */,
+				DDE5E39E25F92A12003A1205 /* Cumparator.h */,
+				DDE5E39F25F92ABE003A1205 /* Comanda.h */,
 			);
 			path = Proiect_poo;
 			sourceTree = "<group>";
