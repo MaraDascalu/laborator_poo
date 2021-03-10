@@ -5,8 +5,8 @@
 //  Created by Mara Dascalu on 10/03/2021.
 //
 
-#ifndef Header_h
-#define Header_h
+#ifndef Furnizor_Magazin_Produs_h
+#define Furnizor_Magazin_Produs_h
 
 #include <string>
 
@@ -34,4 +34,4 @@ public:
     Furnizor(std::string nume);
     void livreaza(Produs &p, Magazin &m);
 };
-#endif /* Header_h */
+#endif

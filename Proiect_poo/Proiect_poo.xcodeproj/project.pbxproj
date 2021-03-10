@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DD0C33D125F915A900D65181 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DD0C33D025F915A900D65181 /* main.cpp */; };
+		DDBEA43325F932C30037102A /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DDBEA43225F932C30037102A /* main.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		DD0C33CB25F915A900D65181 /* CopyFiles */ = {
+		DDBEA42D25F932C30037102A /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
@@ -23,15 +23,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		DD0C33CD25F915A900D65181 /* Proiect_poo */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Proiect_poo; sourceTree = BUILT_PRODUCTS_DIR; };
-		DD0C33D025F915A900D65181 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		DDE5E39D25F9295A003A1205 /* Furnizor_Magazin_Produs.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Furnizor_Magazin_Produs.h; sourceTree = "<group>"; };
-		DDE5E39E25F92A12003A1205 /* Cumparator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Cumparator.h; sourceTree = "<group>"; };
-		DDE5E39F25F92ABE003A1205 /* Comanda.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Comanda.h; sourceTree = "<group>"; };
+		DDBEA42F25F932C30037102A /* Proiect_poo */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Proiect_poo; sourceTree = BUILT_PRODUCTS_DIR; };
+		DDBEA43225F932C30037102A /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		DD0C33CA25F915A900D65181 /* Frameworks */ = {
+		DDBEA42C25F932C30037102A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -41,29 +38,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		DD0C33C425F915A900D65181 = {
+		DDBEA42625F932C30037102A = {
 			isa = PBXGroup;
 			children = (
-				DD0C33CF25F915A900D65181 /* Proiect_poo */,
-				DD0C33CE25F915A900D65181 /* Products */,
+				DDBEA43125F932C30037102A /* Proiect_poo */,
+				DDBEA43025F932C30037102A /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		DD0C33CE25F915A900D65181 /* Products */ = {
+		DDBEA43025F932C30037102A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				DD0C33CD25F915A900D65181 /* Proiect_poo */,
+				DDBEA42F25F932C30037102A /* Proiect_poo */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		DD0C33CF25F915A900D65181 /* Proiect_poo */ = {
+		DDBEA43125F932C30037102A /* Proiect_poo */ = {
 			isa = PBXGroup;
 			children = (
-				DD0C33D025F915A900D65181 /* main.cpp */,
-				DDE5E39D25F9295A003A1205 /* Furnizor_Magazin_Produs.h */,
-				DDE5E39E25F92A12003A1205 /* Cumparator.h */,
-				DDE5E39F25F92ABE003A1205 /* Comanda.h */,
+				DDBEA43225F932C30037102A /* main.cpp */,
 			);
 			path = Proiect_poo;
 			sourceTree = "<group>";
@@ -71,13 +65,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		DD0C33CC25F915A900D65181 /* Proiect_poo */ = {
+		DDBEA42E25F932C30037102A /* Proiect_poo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DD0C33D425F915A900D65181 /* Build configuration list for PBXNativeTarget "Proiect_poo" */;
+			buildConfigurationList = DDBEA43625F932C30037102A /* Build configuration list for PBXNativeTarget "Proiect_poo" */;
 			buildPhases = (
-				DD0C33C925F915A900D65181 /* Sources */,
-				DD0C33CA25F915A900D65181 /* Frameworks */,
-				DD0C33CB25F915A900D65181 /* CopyFiles */,
+				DDBEA42B25F932C30037102A /* Sources */,
+				DDBEA42C25F932C30037102A /* Frameworks */,
+				DDBEA42D25F932C30037102A /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -85,23 +79,23 @@
 			);
 			name = Proiect_poo;
 			productName = Proiect_poo;
-			productReference = DD0C33CD25F915A900D65181 /* Proiect_poo */;
+			productReference = DDBEA42F25F932C30037102A /* Proiect_poo */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		DD0C33C525F915A900D65181 /* Project object */ = {
+		DDBEA42725F932C30037102A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 1240;
 				TargetAttributes = {
-					DD0C33CC25F915A900D65181 = {
+					DDBEA42E25F932C30037102A = {
 						CreatedOnToolsVersion = 12.4;
 					};
 				};
 			};
-			buildConfigurationList = DD0C33C825F915A900D65181 /* Build configuration list for PBXProject "Proiect_poo" */;
+			buildConfigurationList = DDBEA42A25F932C30037102A /* Build configuration list for PBXProject "Proiect_poo" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -109,29 +103,29 @@
 				en,
 				Base,
 			);
-			mainGroup = DD0C33C425F915A900D65181;
-			productRefGroup = DD0C33CE25F915A900D65181 /* Products */;
+			mainGroup = DDBEA42625F932C30037102A;
+			productRefGroup = DDBEA43025F932C30037102A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				DD0C33CC25F915A900D65181 /* Proiect_poo */,
+				DDBEA42E25F932C30037102A /* Proiect_poo */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		DD0C33C925F915A900D65181 /* Sources */ = {
+		DDBEA42B25F932C30037102A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DD0C33D125F915A900D65181 /* main.cpp in Sources */,
+				DDBEA43325F932C30037102A /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		DD0C33D225F915A900D65181 /* Debug */ = {
+		DDBEA43425F932C30037102A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -190,7 +184,7 @@
 			};
 			name = Debug;
 		};
-		DD0C33D325F915A900D65181 /* Release */ = {
+		DDBEA43525F932C30037102A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -242,7 +236,7 @@
 			};
 			name = Release;
 		};
-		DD0C33D525F915A900D65181 /* Debug */ = {
+		DDBEA43725F932C30037102A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -250,7 +244,7 @@
 			};
 			name = Debug;
 		};
-		DD0C33D625F915A900D65181 /* Release */ = {
+		DDBEA43825F932C30037102A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -261,25 +255,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		DD0C33C825F915A900D65181 /* Build configuration list for PBXProject "Proiect_poo" */ = {
+		DDBEA42A25F932C30037102A /* Build configuration list for PBXProject "Proiect_poo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				DD0C33D225F915A900D65181 /* Debug */,
-				DD0C33D325F915A900D65181 /* Release */,
+				DDBEA43425F932C30037102A /* Debug */,
+				DDBEA43525F932C30037102A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DD0C33D425F915A900D65181 /* Build configuration list for PBXNativeTarget "Proiect_poo" */ = {
+		DDBEA43625F932C30037102A /* Build configuration list for PBXNativeTarget "Proiect_poo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				DD0C33D525F915A900D65181 /* Debug */,
-				DD0C33D625F915A900D65181 /* Release */,
+				DDBEA43725F932C30037102A /* Debug */,
+				DDBEA43825F932C30037102A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = DD0C33C525F915A900D65181 /* Project object */;
+	rootObject = DDBEA42725F932C30037102A /* Project object */;
 }
