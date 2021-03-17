@@ -16,5 +16,5 @@ int main(int argc, const char * argv[]) {
     Produs p("nume", 20);
     Furnizor f("nume");
     Cumparator c("nume", 752);
-    Comanda (111, c);
+    Comanda cmd(111, c);
 }

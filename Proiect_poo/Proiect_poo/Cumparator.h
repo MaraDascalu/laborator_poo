@@ -16,8 +16,12 @@ class Cumparator{
     int telefon;
 public:
     Cumparator(std::string nume, int telefon);
+    Cumparator(const Cumparator &c);
+    Cumparator &operator =(const Cumparator &cumparator);
+    virtual ~Cumparator();
     void comanda(Produs &p, Magazin &m);
     void cumpara();
+    friend std::ostream &operator<<(std::ostream &os,const Cumparator &cumparator);
 };
 
 #endif

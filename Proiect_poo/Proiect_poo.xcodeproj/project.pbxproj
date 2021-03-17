@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DD5A79F126023B2B008FFC90 /* Furnizor_Magazin_produs.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DD5A79EF26023B2B008FFC90 /* Furnizor_Magazin_produs.cpp */; };
+		DD5A79FB26023F5F008FFC90 /* Cumparator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DD5A79F926023F5F008FFC90 /* Cumparator.cpp */; };
+		DD5A7A00260246ED008FFC90 /* Comanda.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DD5A79FE260246ED008FFC90 /* Comanda.cpp */; };
 		DDBEA43325F932C30037102A /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DDBEA43225F932C30037102A /* main.cpp */; };
 /* End PBXBuildFile section */
 
@@ -23,8 +26,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		DD5A79EF26023B2B008FFC90 /* Furnizor_Magazin_produs.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Furnizor_Magazin_produs.cpp; sourceTree = "<group>"; };
+		DD5A79F926023F5F008FFC90 /* Cumparator.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Cumparator.cpp; sourceTree = "<group>"; };
+		DD5A79FE260246ED008FFC90 /* Comanda.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Comanda.cpp; sourceTree = "<group>"; };
 		DDBEA42F25F932C30037102A /* Proiect_poo */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Proiect_poo; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDBEA43225F932C30037102A /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		DDBEA43A25F933120037102A /* Furnizor_Magazin_Produs.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Furnizor_Magazin_Produs.h; sourceTree = "<group>"; };
+		DDBEA43B25F933550037102A /* Cumparator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Cumparator.h; sourceTree = "<group>"; };
+		DDBEA43C25F933840037102A /* Comanda.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Comanda.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +67,12 @@
 			isa = PBXGroup;
 			children = (
 				DDBEA43225F932C30037102A /* main.cpp */,
+				DD5A79EF26023B2B008FFC90 /* Furnizor_Magazin_produs.cpp */,
+				DDBEA43A25F933120037102A /* Furnizor_Magazin_Produs.h */,
+				DD5A79F926023F5F008FFC90 /* Cumparator.cpp */,
+				DDBEA43B25F933550037102A /* Cumparator.h */,
+				DD5A79FE260246ED008FFC90 /* Comanda.cpp */,
+				DDBEA43C25F933840037102A /* Comanda.h */,
 			);
 			path = Proiect_poo;
 			sourceTree = "<group>";
@@ -119,6 +134,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				DDBEA43325F932C30037102A /* main.cpp in Sources */,
+				DD5A79F126023B2B008FFC90 /* Furnizor_Magazin_produs.cpp in Sources */,
+				DD5A79FB26023F5F008FFC90 /* Cumparator.cpp in Sources */,
+				DD5A7A00260246ED008FFC90 /* Comanda.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

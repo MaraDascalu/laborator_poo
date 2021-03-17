@@ -15,6 +15,7 @@ class Comanda{
     Cumparator c;
 public:
     Comanda(int nr_comanda, Cumparator c);
+    ~Comanda();
     void pret_total();
     
 };
