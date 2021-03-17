@@ -9,12 +9,15 @@
 #define Furnizor_Magazin_Produs_h
 
 #include <string>
+#include <vector>
+#include <bits/stdc++.h>
 
 class Furnizor;
 
 class Magazin{
     std::string nume;
     std::string adresa;
+    std::vector<tuple<char, int>> produse;
 public:
     Magazin(std::string nume, std::string adresa);
     ~Magazin();

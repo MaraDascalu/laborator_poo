@@ -8,5 +8,5 @@
 #include "Comanda.h"
 
 Comanda::Comanda(int nr_comanda, Cumparator c) : c(c){ }
-void Comanda::pret_total(){ }
+double Comanda::pret_total(){ }
 Comanda::~Comanda(){ } 

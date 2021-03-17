@@ -26,8 +26,9 @@ std::ostream &operator<<(std::ostream &os, const Cumparator &cumparator) {
     os << cumparator.nume <<"\n";
     return os;
 }
+void Cumparator::adauga_produs(Comanda &comanda){ };
+void Cumparator::elimina_produs(Comanda &comanda){ };
 void Cumparator::comanda(Produs &p, Magazin &m){ }
-void Cumparator::cumpara(){ }
 Cumparator::~Cumparator(){
     std::cout << "destructor cumparator";  } 
 

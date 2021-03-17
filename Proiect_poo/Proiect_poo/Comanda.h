@@ -9,14 +9,18 @@
 #define Comanda_h
 
 #include "Cumparator.h"
+#include <vector>
 
 class Comanda{
     int nr_comanda;
+    int status;
+    std::vector<char> lista_produse;
     Cumparator c;
+
 public:
     Comanda(int nr_comanda, Cumparator c);
     ~Comanda();
-    void pret_total();
+    double pret_total();
     
 };
 
