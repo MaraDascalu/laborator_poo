@@ -8,7 +8,7 @@
 #include <iostream>
 #include "Cumparator.h"
 
-Cumparator::Cumparator(std:: string nume, int telefon) : nume(nume), telefon(telefon){}
+Cumparator::Cumparator(std:: string nume, int telefon, int buget) : nume(nume), telefon(telefon), buget(buget){} 
 Cumparator::Cumparator(const Cumparator &c){
     nume = c.nume;
     telefon = c.telefon;
@@ -28,7 +28,7 @@ std::ostream &operator<<(std::ostream &os, const Cumparator &cumparator) {
 }
 void Cumparator::adauga_produs(Comanda &comanda){ };
 void Cumparator::elimina_produs(Comanda &comanda){ };
-void Cumparator::comanda(Produs &p, Magazin &m){ }
+void Cumparator::comanda(Comanda &c, Magazin &m){ }
 Cumparator::~Cumparator(){
     std::cout << "destructor cumparator";  } 
 

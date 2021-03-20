@@ -14,11 +14,11 @@
 class Comanda{
     int nr_comanda;
     int status;
-    std::vector<char> lista_produse;
+    std::vector<produs_cantitate> lista_produse;
     Cumparator c;
 
 public:
-    Comanda(int nr_comanda, Cumparator c);
+    Comanda(int nr_comanda, int status, Cumparator c);
     ~Comanda();
     double pret_total();
     

@@ -15,6 +15,6 @@ int main(int argc, const char * argv[]) {
     Magazin m("nume", "adresa");
     Produs p("nume", 20);
     Furnizor f("nume");
-    Cumparator c("nume", 752);
-    Comanda cmd(111, c);
+    Cumparator cumparator("nume", 752, 2233);
+    Comanda cmd(111, 0, cumparator);  
 }
