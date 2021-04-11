@@ -12,16 +12,17 @@
 #include <vector>
 
 class Comanda{
+protected:
     int nr_comanda;
     int status;
     std::vector<produs_cantitate> lista_produse;
     Cumparator c;
 
 public:
-    Comanda(int nr_comanda, int status, Cumparator c);
+    Comanda(int nr_comanda, int status, std::vector<produs_cantitate> lista_produse, Cumparator c);
     ~Comanda();
     double pret_total();
-    
+    std::vector<produs_cantitate> &get_lista();
 };
 
 #endif

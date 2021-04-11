@@ -22,6 +22,7 @@ public:
     std::string get_nume();
     ~Produs();
     void se_gaseste_in(Magazin &m);
+    friend std::ostream &operator<<(std::ostream &os,const Produs &produs);
 };
 
 typedef std::tuple<Produs, int> produs_cantitate;
@@ -32,7 +33,7 @@ class Magazin{
     std::vector<produs_cantitate> produse;
     int capacitate_maxima;
 public:
-    Magazin(std::string nume, std::string adresa);
+    Magazin(std::string nume, std::string adresa, std::vector<produs_cantitate> produse, int capacitate);
     ~Magazin();
     void primeste_marfa(Furnizor &f);
     int get_capacitate();

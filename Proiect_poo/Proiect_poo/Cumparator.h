@@ -23,10 +23,19 @@ public:
     Cumparator(const Cumparator &c);
     Cumparator &operator =(const Cumparator &cumparator);
     virtual ~Cumparator();  
-    void comanda(Comanda &c, Magazin &m);
+//    void comanda(Comanda &c, Magazin &m);
     void adauga_produs(Comanda &comanda, produs_cantitate &p);
     void elimina_produs(Comanda &comanda, produs_cantitate &p);
     friend std::ostream &operator<<(std::ostream &os,const Cumparator &cumparator);
+};
+
+class Cumparator_fidel : public Cumparator{
+    int vechime;
+    int discount = 0;
+public:
+    void set_vechime(int val);
+    int get_vechime();
+    void set_discount(const Cumparator_fidel &cumparator_fidel);
 };
 
 #endif
