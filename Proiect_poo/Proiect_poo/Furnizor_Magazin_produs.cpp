@@ -6,6 +6,7 @@
 //
 
 #include "Furnizor_Magazin_Produs.h"
+#include <algorithm>
 
 Magazin::Magazin(std::string nume, std::string adresa, std::vector<produs_cantitate> produse, int capacitate) : nume(nume), adresa(adresa), produse(produse), capacitate_maxima(capacitate) {}
 void Magazin::primeste_marfa(Furnizor &furnizor){furnizor.livreaza(*this);}
@@ -39,6 +40,13 @@ std::ostream &operator<<(std::ostream &os, const Produs &produs){
     return os;
 }
 Produs::~Produs(){}
+
+void Produs_redus::set_reducere(int val){
+    reducere = val;
+}
+int Produs_redus::pret_dupa_reducere(){ 
+    return pret - pret * reducere;
+}
 
 Furnizor::Furnizor(std::string nume) : nume(nume){}
 void Furnizor::livreaza(Magazin &magazin){

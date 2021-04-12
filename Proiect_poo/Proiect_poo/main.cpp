@@ -24,7 +24,7 @@ int main(int argc, const char * argv[]) {
     std::cout<<capacitate<<"\n";
     std::vector<produs_cantitate> produse = magazin.get_produse();
     for (auto & produs : produse)
-        std::cout<<get<0>(produs)<<" "<<get<1>(produs)<<"\n";
+        std::cout<<std::get<0>(produs)<<" "<<std::get<1>(produs)<<"\n";
     bool exista_produs = magazin.exista(produs1);
     std::cout<<exista_produs<<"\n";
     bool stoc = magazin.e_disponibil(produs2);
@@ -42,19 +42,22 @@ int main(int argc, const char * argv[]) {
     std::cout<<stoc1<<"\n";
     
     //Metode Comanda
-//    std::vector<produs_cantitate> lista_comanda = cmd.get_lista();
-//    for (auto& produs: lista_comanda)
-//        std::cout<<get<0>(produs)<<" "<<get<1>(produs)<<"\n";
-//    
+    std::vector<produs_cantitate> lista_comanda = cmd.get_lista();
+    for (auto& produs: lista_comanda)
+        std::cout<<std::get<0>(produs)<<" "<<std::get<1>(produs)<<"\n";
+    
     //Metode Cumparator
     Cumparator cumparator2(cumparator1);
     std::cout<<cumparator2;
     produs_cantitate produs_comanda_add = {produs2, 3};
     cumparator2.adauga_produs(cmd, produs_comanda_add);
-    std::vector<produs_cantitate> lista_comanda = cmd.get_lista();
-    for (auto& produs: lista_comanda)
-        std::cout<<get<0>(produs)<<" "<<get<1>(produs)<<"\n";
+    std::vector<produs_cantitate> lista_comanda1 = cmd.get_lista();
+    for (auto& produs: lista_comanda1)
+        std::cout<<std::get<0>(produs)<<" "<<std::get<1>(produs)<<"\n";
     produs_cantitate produs_comanda_el = {produs1, 1};
     cumparator2.elimina_produs(cmd, produs_comanda_el);
+    std::vector<produs_cantitate> lista_comanda2 = cmd.get_lista();
+    for (auto& produs: lista_comanda2)
+        std::cout<<std::get<0>(produs)<<" "<<std::get<1>(produs)<<"\n";
     
 }

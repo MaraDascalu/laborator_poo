@@ -10,11 +10,13 @@
 
 #include <string>
 #include <vector>
+#include <tuple>
 
 class Furnizor;
 class Magazin;
 
 class Produs{
+protected:
     std::string nume;
     int pret;
 public:
@@ -24,10 +26,17 @@ public:
     void se_gaseste_in(Magazin &m);
     friend std::ostream &operator<<(std::ostream &os,const Produs &produs);
 };
-
 typedef std::tuple<Produs, int> produs_cantitate;
 
+class Produs_redus : public Produs{
+    int reducere;
+public:
+    void set_reducere(int val);
+    int pret_dupa_reducere();
+};
+
 class Magazin{
+protected:
     std::string nume;
     std::string adresa;
     std::vector<produs_cantitate> produse;
