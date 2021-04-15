@@ -6,6 +6,7 @@
 //
 
 #include <iostream>
+#include <cstdlib>
 #include "Cumparator.h"
 #include "Comanda.h"
 
@@ -29,14 +30,27 @@ std::ostream &operator<<(std::ostream &os, const Cumparator &cumparator) {
     os << cumparator.nume <<" "<< cumparator.telefon<<" "<< cumparator.buget<<"\n";
     return os;
 }
-void Cumparator::adauga_produs(Comanda &comanda, produs_cantitate &p){ 
+void Cumparator::adauga_produs(Comanda &comanda, produs_cantitate &p, Magazin &m){
     std::vector<produs_cantitate> &lista = comanda.get_lista();
     bool ok = 0;
     for (int i = 0; i< lista.size(); i++)
-        if (std::get<0>(lista[i]).get_nume() == std::get<0>(p).get_nume()){
-            std::get<1>(lista[i]) += std::get<1>(p);
-            ok = 1;
-            break;
+        if (std::get<0>(lista[i]).get_nume() == std::get<0>(p).get_nume())
+        {
+            try{
+                if (m.e_disponibil(std::get<0>(p)) == 0)
+                {
+                    ok = 1;
+                    throw std::invalid_argument("Produsul "+ std::get<0>(p).get_nume()+  " nu este disponibil pe stoc!\n");
+                }
+                
+                std::get<1>(lista[i]) += std::get<1>(p);
+                ok = 1;
+                break;
+                }
+            catch (std::invalid_argument exceptie)
+            {
+                std::cout<<exceptie.what();
+            }
         }
     if (!ok) lista.push_back(p);
 };
@@ -46,24 +60,9 @@ void Cumparator::elimina_produs(Comanda &comanda, produs_cantitate &p){
         if(std::get<0>(lista[i]).get_nume() == std::get<0>(p).get_nume())
             lista.erase(lista.begin() + i);
 };
-//void Cumparator::comanda(Comanda &c, Magazin &m){ }
 Cumparator::~Cumparator(){
 //    std::cout << "destructor cumparator";
     
-}
-
-void Cumparator_fidel::set_vechime(int val){
-    vechime = val;
-}
-int Cumparator_fidel::get_vechime(){
-    return vechime;
-}
-
-void Cumparator_fidel::set_discount(const Cumparator_fidel &cumparator_fidel){
-    if (vechime >= 2)
-        discount = 15;
-    else if (vechime >= 1)
-            discount = 10;
 }
 
 

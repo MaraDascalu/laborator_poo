@@ -8,8 +8,11 @@
 #include "Furnizor_Magazin_Produs.h"
 #include <algorithm>
 
-Magazin::Magazin(std::string nume, std::string adresa, std::vector<produs_cantitate> produse, int capacitate) : nume(nume), adresa(adresa), produse(produse), capacitate_maxima(capacitate) {}
+Magazin::Magazin(std::string nume,std::vector<produs_cantitate> produse, int  capacitate) : nume(nume), produse(produse), capacitate_maxima(capacitate){}
 void Magazin::primeste_marfa(Furnizor &furnizor){furnizor.livreaza(*this);}
+//void Magazin::set_capacitate(int val){
+//    capacitate_maxima = val;
+//}
 int Magazin::get_capacitate(){
     return this->capacitate_maxima;
 }
