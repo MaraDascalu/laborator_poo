@@ -25,7 +25,7 @@ public:
     Cumparator &operator =(const Cumparator &cumparator);
     virtual ~Cumparator();  
     void adauga_produs(Comanda &comanda, produs_cantitate &p, Magazin &m);
-    void elimina_produs(Comanda &comanda, produs_cantitate &p);
+    void elimina_produs(Comanda &comanda, produs_cantitate &p, Magazin &m);
     friend std::ostream &operator<<(std::ostream &os,const Cumparator &cumparator);
 };
 

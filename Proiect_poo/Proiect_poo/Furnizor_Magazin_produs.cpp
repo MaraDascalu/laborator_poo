@@ -35,6 +35,9 @@ Magazin::~Magazin(){}
 
 Produs::Produs(std::string nume, int pret) : nume(nume), pret(pret){}
 void Produs::se_gaseste_in(Magazin &magazin){}
+int Produs::get_pret(){
+    return pret;
+}
 std::string Produs::get_nume(){
     return nume;
 }
@@ -43,13 +46,6 @@ std::ostream &operator<<(std::ostream &os, const Produs &produs){
     return os;
 }
 Produs::~Produs(){}
-
-void Produs_redus::set_reducere(int val){
-    reducere = val;
-}
-int Produs_redus::pret_dupa_reducere(){ 
-    return pret - pret * reducere;
-}
 
 Furnizor::Furnizor(std::string nume) : nume(nume){}
 void Furnizor::livreaza(Magazin &magazin){
