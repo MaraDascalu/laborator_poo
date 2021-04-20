@@ -33,17 +33,17 @@ class Magazin{
 protected:
     std::string nume;
 //    std::string adresa;
-    std::vector<produs_cantitate> produse;
+    std::vector<std::unique_ptr<produs_cantitate>> produse;
     int capacitate_maxima;
 public:
-    Magazin(std::string nume, std::vector<produs_cantitate> produse, int capacitate);
+    Magazin(std::string nume, std::vector<std::unique_ptr<produs_cantitate>> &&produse, int capacitate);
     ~Magazin();
-    void primeste_marfa(Furnizor &f);
+//    void primeste_marfa(Furnizor &f);
 //    void set_capacitate(int val);
     virtual int get_capacitate();
     bool exista(Produs &p);
     bool e_disponibil(Produs &p);
-    std::vector<std::tuple<Produs, int>>& get_produse();
+    std::vector<std::unique_ptr<produs_cantitate>> &get_produse();
 };
 
 class Furnizor{

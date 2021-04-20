@@ -16,10 +16,10 @@ protected:
     int nr_comanda;
     int status;
     std::vector<produs_cantitate> lista_produse;
-    Cumparator c;
+    std::unique_ptr<Cumparator> cumparator;
 
 public:
-    Comanda(int nr_comanda, int status, std::vector<produs_cantitate> lista_produse, Cumparator c);
+    Comanda(int nr_comanda, int status, std::vector<produs_cantitate> lista_produse, std::unique_ptr<Cumparator> cumparator);
     ~Comanda();
     double pret_total();
     std::vector<produs_cantitate> &get_lista();

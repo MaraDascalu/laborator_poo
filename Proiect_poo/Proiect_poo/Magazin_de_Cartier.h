@@ -11,7 +11,7 @@
 
 class Magazin_de_Cartier : public Magazin{
 public:
-    Magazin_de_Cartier( std::string nume, std::vector<produs_cantitate> produse, int capacitate);
+    Magazin_de_Cartier( std::string nume, std::vector<std::unique_ptr<produs_cantitate>> &&produse, int capacitate);
     int get_capacitate();
 };
 #endif /* Magazin_de_Cartier_h */

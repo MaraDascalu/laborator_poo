@@ -8,7 +8,7 @@
 #include "Comanda.h"
 #include "Cumparator.h"
 
-Comanda::Comanda(int nr_comanda, int status,std::vector<produs_cantitate> lista_produse ,Cumparator c) : nr_comanda(nr_comanda), status(status),lista_produse(lista_produse) ,c(c){} 
+Comanda::Comanda(int nr_comanda, int status,std::vector<produs_cantitate> lista_produse , std::unique_ptr<Cumparator> cumparator) : nr_comanda(nr_comanda), status(status),lista_produse(lista_produse) ,cumparator(std::move(cumparator)){}
 double Comanda::pret_total(){
     double pret = 0;
     for (auto &produs: lista_produse)

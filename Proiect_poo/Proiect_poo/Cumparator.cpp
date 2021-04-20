@@ -32,7 +32,7 @@ std::ostream &operator<<(std::ostream &os, const Cumparator &cumparator) {
 }
 void Cumparator::adauga_produs(Comanda &comanda, produs_cantitate &p, Magazin &m){
     std::vector<produs_cantitate> &lista = comanda.get_lista();
-    std::vector<produs_cantitate> &stoc = m.get_produse();
+    auto &stoc = m.get_produse();
     bool ok = 0;
     for (int i = 0; i< lista.size(); i++)
         if (std::get<0>(lista[i]).get_nume() == std::get<0>(p).get_nume())
@@ -50,15 +50,15 @@ void Cumparator::adauga_produs(Comanda &comanda, produs_cantitate &p, Magazin &m
     if (!ok) lista.push_back(p);
     for (int i = 0 ; i < stoc.size(); i++)
     {
-        if (std::get<0>(stoc[i]).get_nume() == std::get<0>(p).get_nume())
+        if (std::get<0>(*stoc[i]).get_nume() == std::get<0>(p).get_nume())
         {
-            std::get<1>(stoc[i]) -= std::get<1>(p);
+            std::get<1>(*stoc[i]) -= std::get<1>(p);
         }
     }
 };
 void Cumparator::elimina_produs(Comanda &comanda, produs_cantitate &p, Magazin &m){
     std::vector<produs_cantitate> &lista = comanda.get_lista();
-    std::vector<produs_cantitate> &stoc = m.get_produse();
+    auto &stoc = m.get_produse();
     bool ok = 0;
     for (int i = 0; i < lista.size(); i++)
         if(std::get<0>(lista[i]).get_nume() == std::get<0>(p).get_nume())
@@ -69,9 +69,9 @@ void Cumparator::elimina_produs(Comanda &comanda, produs_cantitate &p, Magazin &
     if (ok)
     for (int i = 0 ; i < stoc.size(); i++)
     {
-        if (std::get<0>(stoc[i]).get_nume() == std::get<0>(p).get_nume())
+        if (std::get<0>(*stoc[i]).get_nume() == std::get<0>(p).get_nume())
         {
-            std::get<1>(stoc[i]) += std::get<1>(p);
+            std::get<1>(*stoc[i]) += std::get<1>(p);
         }
     }
 };

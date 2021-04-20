@@ -16,19 +16,22 @@
 
 int main(int argc, const char * argv[]) {
     Produs produs1("stilou", 20), produs2("pix", 10), produs3("radiera", 5), produs4("caiet", 17);
-    Magazin magazin("Librarie", {{produs1, 3}, {produs2, 7}, {produs3, 7}}, 20);
+    produs_cantitate prod1 = {produs1, 3}, prod2 = {produs2, 7}, prod3 = {produs3, 10}, prod4 = {produs4, 1};
+    std::vector<std::unique_ptr<produs_cantitate>> vector_produse;
+    vector_produse.emplace_back(std::make_unique<produs_cantitate>(prod1));
+    vector_produse.emplace_back(std::make_unique<produs_cantitate>(prod2));
+    Magazin magazin("Librarie", std::move(vector_produse) , 20);
     Furnizor f("nume");
     Cumparator cumparator1("nume", 752, 2233);
-    Comanda cmd(111, 0,{} ,cumparator1);
-    
+    Comanda cmd(111, 0,{} ,std::make_unique<Cumparator>(cumparator1));
     
     //Metode Magazin
     int capacitate = magazin.get_capacitate();
     std::cout<<"Capacitate magazin: "<<capacitate<<"\n\n";
-    std::vector<produs_cantitate> produse = magazin.get_produse();
+    std::vector<std::unique_ptr<produs_cantitate>> &produse = magazin.get_produse();
     std::cout<<"Produse magazin:\n";
     for (auto & produs : produse)
-        std::cout<<std::get<0>(produs)<<" "<<std::get<1>(produs)<<"\n";
+        std::cout<<std::get<0>(*produs)<<" "<<std::get<1>(*produs)<<"\n";
     std::cout<<"\n";
     bool exista_produs = magazin.exista(produs1);
     std::cout<<"Exista produs1: "<<exista_produs<<"\n\n";
@@ -69,10 +72,9 @@ int main(int argc, const char * argv[]) {
     for (auto& produs: lista_comanda1)
         std::cout<<std::get<0>(produs)<<" "<<std::get<1>(produs)<<"\n";
 //    std::cout<<"\n";
-    produse = magazin.get_produse();
     std::cout<<"Produse magazin:\n";
     for (auto & produs : produse)
-        std::cout<<std::get<0>(produs)<<" "<<std::get<1>(produs)<<"\n";
+        std::cout<<std::get<0>(*produs)<<" "<<std::get<1>(*produs)<<"\n";
     std::cout<<"\n";
     produs_cantitate produs_comanda_el = {produs1, 1};
     cumparator2.elimina_produs(cmd, produs_comanda_el, magazin);
@@ -80,15 +82,15 @@ int main(int argc, const char * argv[]) {
     std::cout<<"Lista produse comanda actualizata:\n";
     for (auto& produs: lista_comanda2)
         std::cout<<std::get<0>(produs)<<" "<<std::get<1>(produs)<<"\n";
-    produse = magazin.get_produse();
     std::cout<<"Produse magazin:\n";
     for (auto & produs : produse)
-        std::cout<<std::get<0>(produs)<<" "<<std::get<1>(produs)<<"\n";
+        std::cout<<std::get<0>(*produs)<<" "<<std::get<1>(*produs)<<"\n";
     std::cout<<"\n";
     std::cout<<"Total comanda: "<<cmd.pret_total()<<"\n\n";
     
     //Metode Magazin_de_Cartier
-    Magazin_de_Cartier magazin1("LA Magazin", {{produs1, 5}, {produs2, 1}, {produs4, 5} }, magazin.get_capacitate());
+    vector_produse.emplace_back(std::make_unique<produs_cantitate>(prod4));
+    Magazin_de_Cartier magazin1("LA Magazin", std::move(vector_produse), magazin.get_capacitate());
     capacitate = magazin1.get_capacitate();
     std::cout<<"Capacitate magazin de cartier: "<<capacitate<<"\n\n";
     
