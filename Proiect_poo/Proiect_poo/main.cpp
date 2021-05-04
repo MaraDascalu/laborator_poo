@@ -98,4 +98,8 @@ int main(int argc, const char * argv[]) {
     Produs_redus produs1_r("penar", 30);
     produs1_r.set_reducere(10);
     std::cout<<"Pretul produsului dupa reducere: "<<produs1_r.get_pret()<<"\n\n";
+    
+    Cumparator *cumparator = new Cumparator_fidel("Mihai", 44275, 276, 5);
+    std::cout<<cumparator->get_discount()<<"\n\n";
+    
 }

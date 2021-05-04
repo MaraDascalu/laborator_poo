@@ -14,10 +14,11 @@ class Cumparator_fidel : public Cumparator{
     int discount = 0;
 public:
     Cumparator_fidel(std::string nume, int telefon, int buget);
+    Cumparator_fidel(std::string nume, int telefon, int buget, int vechime);
     void set_vechime(int val);
     int get_vechime();
     void set_discount();
-    int get_discount();
+    int get_discount() override;
 };
 
 #endif /* Cumparator_fidel_h */

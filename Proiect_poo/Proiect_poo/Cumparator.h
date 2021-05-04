@@ -26,6 +26,7 @@ public:
     virtual ~Cumparator();  
     void adauga_produs(Comanda &comanda, produs_cantitate &p, Magazin &m);
     void elimina_produs(Comanda &comanda, produs_cantitate &p, Magazin &m);
+    virtual int get_discount();
     friend std::ostream &operator<<(std::ostream &os,const Cumparator &cumparator);
 };
 

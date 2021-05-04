@@ -75,6 +75,10 @@ void Cumparator::elimina_produs(Comanda &comanda, produs_cantitate &p, Magazin &
         }
     }
 };
+
+int Cumparator::get_discount(){
+    return 0;
+}
 Cumparator::~Cumparator(){
 //    std::cout << "destructor cumparator";
     

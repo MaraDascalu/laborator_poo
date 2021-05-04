@@ -13,8 +13,9 @@ double Comanda::pret_total(){
     double pret = 0;
     for (auto &produs: lista_produse)
         pret += std::get<0>(produs).get_pret() * std::get<1>(produs);
-    return pret;
+    return pret - (cumparator->get_discount() / 100) * pret;
 }
+
 Comanda::~Comanda(){ }
 std::vector<produs_cantitate>& Comanda::get_lista(){
     return lista_produse;

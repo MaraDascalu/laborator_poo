@@ -10,6 +10,13 @@
 
 
 Cumparator_fidel::Cumparator_fidel(std::string nume, int telefon, int buget): Cumparator(nume, telefon, buget){};
+Cumparator_fidel::Cumparator_fidel(std::string nume, int telefon, int buget, int vechime) : Cumparator(nume, telefon, buget), vechime(vechime)
+{
+    if (vechime >= 2)
+        discount = 15;
+    else if (vechime >= 1)
+            discount = 10;
+}
 
 void Cumparator_fidel::set_vechime(int val){
     vechime = val;

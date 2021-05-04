@@ -6,10 +6,11 @@
 //
 
 #include <stdio.h>
+#include <algorithm>
 #include "Magazin_de_Cartier.h"
 
 Magazin_de_Cartier::Magazin_de_Cartier(std::string nume, std::vector<std::unique_ptr<produs_cantitate>> &&produse, int capacitate) :  Magazin(nume, std::move(produse), capacitate) {}
 
 int Magazin_de_Cartier::get_capacitate(){
-    return Magazin::get_capacitate() - 5;
+    return std::max(0, Magazin::get_capacitate() - 5);
 }

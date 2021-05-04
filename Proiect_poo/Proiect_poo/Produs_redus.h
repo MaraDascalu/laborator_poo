@@ -14,7 +14,7 @@ class Produs_redus : public Produs{
 public:
     Produs_redus(std::string nume, int pret);
     void set_reducere(int val);
-    int get_pret();
+    int get_pret() override;
 };
 
 #endif /* Produs_redus_h */
