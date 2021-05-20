@@ -20,6 +20,8 @@ int main(int argc, const char * argv[]) {
     std::vector<std::unique_ptr<produs_cantitate>> vector_produse;
     vector_produse.emplace_back(std::make_unique<produs_cantitate>(prod1));
     vector_produse.emplace_back(std::make_unique<produs_cantitate>(prod2));
+    vector_produse.emplace_back(std::make_unique<produs_cantitate>(prod3));
+    vector_produse.emplace_back(std::make_unique<produs_cantitate>(prod4));
     Magazin magazin("Librarie", std::move(vector_produse) , 20);
     Furnizor f("nume");
     Cumparator cumparator1("nume", 752, 2233);
@@ -47,7 +49,7 @@ int main(int argc, const char * argv[]) {
     //Metode Frunizor
 //    f.livreaza(magazin);
     bool stoc1 = magazin.e_disponibil(produs2);
-    std::cout<<"Disponibilitate produus2: "<<stoc1<<"\n\n";
+    std::cout<<"Disponibilitate produs2: "<<stoc1<<"\n\n";
     
     //Metode Comanda
     std::vector<produs_cantitate> lista_comanda = cmd.get_lista();
@@ -99,7 +101,28 @@ int main(int argc, const char * argv[]) {
     produs1_r.set_reducere(10);
     std::cout<<"Pretul produsului dupa reducere: "<<produs1_r.get_pret()<<"\n\n";
     
-    Cumparator *cumparator = new Cumparator_fidel("Mihai", 44275, 276, 5);
+    Cumparator* cumparator = new Cumparator_fidel("Mihai", 44275, 276, 5);
+    Comanda cmd2(112,0,{}, std::make_unique<Cumparator_fidel>("Mihai", 44275, 276, 5));
     std::cout<<cumparator->get_discount()<<"\n\n";
+    lista_comanda = cmd2.get_lista();
+    std::cout<<"Lista produse din comanda2:\n";
+    for (auto& produs: lista_comanda)
+        std::cout<<std::get<0>(produs)<<" "<<std::get<1>(produs)<<"\n";
+    std::cout<<"\n";
+    
+    try{
+        produs_cantitate prod1_cmd2_add = {produs3, 5}, prod2_cmd2_add = {produs4, 10};
+        cumparator->adauga_produs(cmd2, prod1_cmd2_add, magazin);
+        cumparator->adauga_produs(cmd2, prod2_cmd2_add, magazin);
+    }catch(std::invalid_argument exceptie){
+        std::cout<<exceptie.what()<<"\n";
+    }
+    lista_comanda = cmd2.get_lista();
+    std::cout<<"Lista produse din comanda2:\n";
+    for (auto& produs: lista_comanda)
+        std::cout<<std::get<0>(produs)<<" "<<std::get<1>(produs)<<"\n";
+    std::cout<<"\n";
+    std::cout<<cmd2.pret_total()<<"\n";
+    delete cumparator;
     
 }
