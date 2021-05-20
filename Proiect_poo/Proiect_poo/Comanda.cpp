@@ -13,7 +13,7 @@ double Comanda::pret_total(){
     double pret = 0;
     for (auto &produs: lista_produse)
         pret += std::get<0>(produs).get_pret() * std::get<1>(produs);
-    return pret - (cumparator->get_discount() / 100) * pret;
+    return pret - (cumparator->get_discount() / 100.0) * pret;
 }
 
 Comanda::~Comanda(){ }

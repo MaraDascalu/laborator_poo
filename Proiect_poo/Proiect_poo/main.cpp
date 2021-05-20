@@ -109,7 +109,7 @@ int main(int argc, const char * argv[]) {
     for (auto& produs: lista_comanda)
         std::cout<<std::get<0>(produs)<<" "<<std::get<1>(produs)<<"\n";
     std::cout<<"\n";
-    
+
     try{
         produs_cantitate prod1_cmd2_add = {produs3, 5}, prod2_cmd2_add = {produs4, 10};
         cumparator->adauga_produs(cmd2, prod1_cmd2_add, magazin);
